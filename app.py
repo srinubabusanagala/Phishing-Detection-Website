@@ -1,4 +1,3 @@
-# app.py - Complete and Corrected Version with Typosquatting Heuristic
 from flask import Flask, request, render_template
 import joblib
 import pandas as pd
@@ -156,4 +155,5 @@ def predict():
         return render_template('index.html', error=f"An error occurred during AI prediction: {e}")
 
 if __name__ == '__main__':
+
     app.run(host='0.0.0.0', port=5000, debug=True)
