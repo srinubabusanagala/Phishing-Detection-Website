@@ -1,5 +1,6 @@
 commands used in phishing detection project through vscode
--->cd "D:\CB\Cyber_security_internship&certificates\Projects\phishing_project"
+execute commands before run the code
+-->cd "Change path to project file"
 -->python -m venv venv
 -->.\venv\Scripts\Activate.ps1    #run in virtual envirnoment
 -->pip install Flask scikit-learn pandas joblib
@@ -9,3 +10,4 @@ commands used in phishing detection project through vscode
 # To Run Code
 -->.\venv\Scripts\Activate.ps1
 -->python app.py
+
