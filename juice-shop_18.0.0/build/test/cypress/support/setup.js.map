@@ -1,0 +1,1 @@
+{"version":3,"file":"setup.js","sourceRoot":"","sources":["../../../../test/cypress/support/setup.ts"],"names":[],"mappings":";AAAA,UAAU,CAAC,GAAG,EAAE;IACd,EAAE,CAAC,SAAS,CAAC,sBAAsB,EAAE,SAAS,CAAC,CAAA;IAC/C,EAAE,CAAC,SAAS,CAAC,sBAAsB,EAAE,SAAS,CAAC,CAAA;IAC/C,EAAE,CAAC,SAAS,CAAC,UAAU,EAAE,IAAI,CAAC,CAAA;AAChC,CAAC,CAAC,CAAA"}
