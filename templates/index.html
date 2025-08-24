@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Phishing Detector</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 40px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { background-color: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); width: 100%; max-width: 600px; text-align: center; }
+        h1 { color: #333; margin-bottom: 10px; }
+        p { color: #666; margin-bottom: 30px; }
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input[type="text"] { padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+        button { padding: 15px; border: none; border-radius: 8px; background-color: #007bff; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s; }
+        button:hover { background-color: #0056b3; }
+        .result-box { margin-top: 30px; padding: 20px; border-radius: 8px; text-align: left;}
+        .phishing { background-color: #ffebee; border: 1px solid #ffcdd2; color: #c62828; }
+        .legitimate { background-color: #e8f5e9; border: 1px solid #c8e6c9; color: #2e7d32; }
+        .error { background-color: #fff3e0; border: 1px solid #ffe0b2; color: #e65100; }
+        strong { font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered Phishing Detector</h1>
+        <p>Enter a URL below to check if it's safe.</p>
+        
+        <form action="/predict" method="post">
+            <input type="text" name="url" placeholder="e.g., www.google.com" required>
+            <button type="submit">Check URL</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box {{ 'phishing' if 'PHISHING' in result or 'MALICIOUS' in result else 'legitimate' }}">
+            <h3>{{ result }}</h3>
+            <p><strong>Checked URL:</strong> {{ url }}</p>
+            <p><strong>Confidence:</strong> {{ confidence }}</p>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="result-box error">
+            <h3>Error</h3>
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+commands used in phishing project through vscode
+-->cd "D:\CB\Cyber_security_internship&certificates\Projects\phishing_project"
+-->python -m venv venv
+-->.\venv\Scripts\Activate.ps1    #run in virtual envirnoment
+-->pip install Flask scikit-learn pandas joblib
+-->pip install requests
+
+# To Run Code
+-->.\venv\Scripts\Activate.ps1
+-->python app.py
+-->ctrl c #to stop
